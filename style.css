@@ -1,0 +1,273 @@
+
+@font-face{
+  font-family: 'Montserrat';
+  src:url(fonts/Montserrat-VariableFont_wght.ttf)
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: #000000;
+}
+
+.header{
+  min-height: 10vh;
+  width:100%
+}
+nav.fa{
+  display:none;
+  color: transparent;
+}
+nav{
+  display: flex;
+  padding:  2% 3%;
+  height: 10px;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow:white;
+ background-color: white;
+ box-shadow: 0 1px 5px rgba(0, 0, 0, 0.3), 0 0 0 rgba(0, 0, 0, 0.1) inset;
+ z-index: -1;
+  bottom:0;
+}
+
+.shadow::before,
+.shadow::after {
+  content:'';
+  position: absolute;
+  z-index: -1;
+  box-shadow: 0 0 20px rgba (0,0,0,0.8);
+  top: 50%;
+  bottom:0;
+
+}
+nav img{
+  width: 120px;
+  
+  }
+  .nav-links{
+      flex: 1;
+      text-align: center;
+  }
+  .nav-links ul li{
+      list-style: none;
+      display:inline-block;
+      padding: 3px 12px;
+      position: relative;
+      font-weight: lighter;
+  }
+  
+
+
+.nav-links ul li a{
+  color: #000000;
+text-decoration: none;
+font-size: 15px;
+}
+.nav-links ul li::after{
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #000000;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+width: 100%
+}
+.text-box{
+  font-family: 'Montserrat';
+  font-size: large;
+  width: 100%;
+  color:#000000;
+  position: relative;
+ 
+  padding-top: 40px;
+}
+.container{
+  /* width:450px; */
+display:flex;
+/* align-items: right; */
+/* justify-content: center; */
+height:500px;
+overflow:hidden;
+padding-left:5%; 
+padding-top:5%;
+}
+.gallery{
+  width: 700px;
+  display:flex;
+align-items: center;
+justify-content: center;
+padding-left: 1%;
+padding-right: 5%;
+padding-top: 3%;
+}
+.img-box{
+  width:350px;
+  height:350px;
+ border-radius: 20px;
+ background: url(images/Photo\ 4.jpg);
+ background-size: cover;
+ background-position: center;
+ position: relative;
+ transition: width 0.5s;
+
+}
+
+.img-box:nth-child(2){
+  background: url(images/Photo\ 1.jpg);
+  background-size: cover;
+ background-position: center;
+ width:120px;
+ margin: 10px;
+}
+.img-box:nth-child(3){
+  background: url(images/photo\ 2.jpg);
+  background-size: cover;
+ background-position: center;
+ width:120px;
+ margin: 10px;
+}
+.img-box:nth-child(4){
+  background: url(images/Photo\ 3.jpg);
+  background-size: cover;
+ background-position: center;
+ width:120px;
+  margin: 10px;
+ 
+
+}
+.img-box h1{
+  Color:white;
+  position:absolute;
+  bottom:0;
+  Left:30px;
+  opacity:0;
+  font-family:'Montserrat';
+  transition: bottom 0.5;
+  opacity:0;
+}
+.img-box.shrink{
+  width:120px;
+}
+.img-box:hover{
+  width: 350px;
+  cursor: pointer;
+  
+}
+.img-box:hover h1{
+  opacity:1;
+  bottom:25px;
+}
+.text-box h1{
+  font-size: 50px;
+  font-family: 'Montserrat';
+  font-weight: bold;
+}
+.text-box p{
+  margin: 20px 0px 30px;
+  font-size: 20px;
+  color: #000000;
+  font-family: 'Montserrat';
+  font-weight: normal;
+}
+#close{
+  display: none;
+}
+#menu{
+  display: none;
+}
+
+
+
+@media(max-width: 700px)
+
+{ 
+ .gallery{
+ background-size: 60%;
+  padding-left: 5%;
+  
+ }
+ .img-box{
+  width:100px;
+  height:50%;
+
+ }
+ .img-box:nth-child(2){
+  background: url(images/Photo\ 1.jpg);
+  background-size: cover;
+ background-position: center;
+ width:30px;
+ margin: 5px;
+}
+.img-box:nth-child(3){
+  background: url(images/photo\ 2.jpg);
+  background-size: cover;
+ background-position: center;
+ width:30px;
+ margin:5px;
+}
+.img-box:nth-child(4){
+  background: url(images/Photo\ 3.jpg);
+  background-size: cover;
+ background-position: center;
+ width:30px;
+  margin:5px;
+}
+  .text-box h1{
+    font-size:30px;
+  }
+  .text-box p{
+    font-size:8px;
+  }
+  nav img{
+    width: 90px;
+}
+
+.img-box.shrink{
+  width:60px;
+}
+.img-box:hover{
+  width: 100px;
+  cursor: pointer;
+}
+.img-box:hover h1{
+  opacity:1;
+  bottom:0px;
+  font-size: 10px;
+}
+.nav-links{
+  position: absolute;
+  background-color: white;
+  height: 700px;
+  width: 200px;
+  top: 0;
+right: -230px;
+text-align: right;
+padding-right: 3%;
+z-index: 2;
+padding-top: 1%;
+transition: 1s;
+}
+
+#close{
+  display:block;
+  color:#000000;
+  font-size: 20px;
+  margin: 10px;
+  cursor:pointer;
+  
+}
+#menu{
+  display:block;
+  color:#000000;
+  font-size: 20px;
+  margin: 5px;
+  cursor:pointer;
+  
+}
+
+}
